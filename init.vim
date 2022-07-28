@@ -65,7 +65,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'jiangmiao/auto-pairs'    
     Plug 'ap/vim-css-color'
     Plug 'preservim/nerdtree'
-
+    
     "completion / linters / formatters
     Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install'}
     Plug 'plasticboy/vim-markdown'
@@ -100,6 +100,11 @@ inoremap jk <esc>
 "turn off search highlight
 nnoremap ,<space> :nohlsearch<CR>
 
+"navigation keymaps
+nnoremap <C-n> :tabnext<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-w> :tabclose<CR>
+
 "move split panes to left/bottom/top/right
 nnoremap <A-h> <C-W>H
 nnoremap <A-j> <C-W>J
@@ -113,8 +118,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "turn nerdtree keybinds
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+"nnoremap <C-f> :NERDTreeFocus<CR>
+nnoremap <F1> :NERDTree<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
 "nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 
